@@ -5,7 +5,7 @@ from django.http import Http404, HttpResponseNotFound, HttpResponseRedirect
 
 
 def index(request):
-    pass
+    return render(request, "blog/index.html")
 
 
 def posts(request):
