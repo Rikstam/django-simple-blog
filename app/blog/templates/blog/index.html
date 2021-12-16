@@ -1,7 +1,30 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "blog/index.css" %}">
+{% endblock css_files %}
+
 {% block title%} My blog {% endblock %}
 
 {% block content %}
-    <h1>Welcome to my blog</h1>
+    <section id="welcome">
+        <header>
+            <img src="" alt=""/>
+            <h2>Riku's blog</h2>
+        </header>
+        <p>Stuff here</p>
+    </section>
+
+    <section id="latest-posts">
+        <h2>Latest posts</h2>
+        <ul>
+          {% include "blog/includes/post.html" %}
+        </ul>
+    </section>
+    <section class="about">
+        <p>Irure magna aute ea exercitation ad enim ad cillum. Nisi in nulla mollit occaecat pariatur adipisicing velit amet. Reprehenderit fugiat irure irure minim. Quis id ut ullamco cupidatat nostrud ullamco ea proident Lorem ea proident nisi.</p>
+        <p>Enim proident ea velit sint ea veniam in esse commodo. Ex eiusmod deserunt pariatur aliquip mollit nostrud irure. Elit incididunt consequat ut amet in ullamco amet ea ex ad. Id laboris minim sint magna magna fugiat minim.</p>
+    </section>
 {% endblock %}

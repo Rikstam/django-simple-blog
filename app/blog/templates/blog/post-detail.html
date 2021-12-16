@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block  title %}
+    This post title
+{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "blog/post.css" %}">
+{% endblock css_files %}
+
+{% block content %}
+<section id="summary">
+    <h2>Post title</h2>
+    <img src="{% static 'blog/images/image-1.jpg' %}" alt="post title" />
+    <address>By Riku</address>
+    <div>
+        Last updated on <time>July 10th</time>
+    </div>
+</section>
+<main>
+    <p>Consectetur adipisicing dolore non nostrud fugiat. Non laboris cupidatat amet cillum sunt veniam Lorem velit elit id veniam. Deserunt do eiusmod mollit laborum velit ipsum pariatur eiusmod proident. Laboris id pariatur eu occaecat.</p>
+</main>
+{% endblock %}
