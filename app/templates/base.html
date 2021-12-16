@@ -12,13 +12,17 @@
     {% block css_files %}
     {% endblock css_files %}
   </head>
-  <body class="">
-    <header>
-      <h1><a href="{% url 'starting-page' %}">Riku's Blog</a></h1>
-      <nav>
-          <a href="{% url 'posts-page' %}">All posts</a>
-      </nav>
+  <body class="bg-slate-50">
+    <div class="bg-violet-800 mb-12">
+    <header class="container mx-auto px-4 py-8">
+      <div class="flex justify-between">
+        <h1><a href="{% url 'starting-page' %}" class="text-white text-xl font-semibold">Riku's Blog</a></h1>
+        <nav>
+            <a href="{% url 'posts-page' %}" class="text-white">All posts</a>
+        </nav>
+      </div>
     </header>
+   </div>
     <div class="container mx-auto px-4">
       {% block content %} {% endblock %}
     </div>

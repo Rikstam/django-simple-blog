@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block  title %}
-    This post title
+    {{ post.title }}
 {% endblock %}
 
 {% block css_files %}
@@ -11,15 +11,21 @@
 {% endblock css_files %}
 
 {% block content %}
-<section id="summary">
-    <h2>Post title</h2>
-    <img src="{% static 'blog/images/image-1.jpg' %}" alt="post title" />
-    <address>By Riku</address>
+<section id="summary" class="flex justify-between bg-violet-800 rounded-xl px-12 py-12 mb-12">
     <div>
-        Last updated on <time>July 10th</time>
+        <h2 class="text-white text-6xl font-semibold">{{ post.title }}</h2>
+    </div>
+    <div>
+        <img src="{% static 'blog/images/'|add:post.image %}"
+             alt="post title"
+             class="w-16 md:w-32 lg:w-48 border-4 border-white rotate-12"/>
+        <address class="text-white">By {{post.author}}</address>
+        <div class="text-white">
+            Last updated on <time>{{ post.date|date:"d M Y" }}</time>
+        </div>
     </div>
 </section>
-<main>
-    <p>Consectetur adipisicing dolore non nostrud fugiat. Non laboris cupidatat amet cillum sunt veniam Lorem velit elit id veniam. Deserunt do eiusmod mollit laborum velit ipsum pariatur eiusmod proident. Laboris id pariatur eu occaecat.</p>
+<main class="bg-white rounded-xl px-12 py-12 mb-12 shadow-md">
+    <p>{{ post.content|linebreaks }}</p>
 </main>
 {% endblock %}
