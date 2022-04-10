@@ -1,31 +1,35 @@
-from django.shortcuts import render, get_object_or_404
 from blog.models import Post
+from django.views.generic import ListView, DetailView
 
 # Create your views here.
+
+
+class StartingPageView(ListView):
+    template_name = "blog/index.html"
+    model = Post
+    ordering = ["-date"]
+    context_object_name = "posts"
+
+    def get_queryset(self):
+        queryset =  super().get_queryset()
+        data = queryset[:3]
+        return data
+class AllPostsView(ListView):
+    template_name = "blog/all-posts.html"
+    model = Post
+    ordering = ["-date"]
+    context_object_name = "posts"
+
+class SinglePostView(DetailView):
+    template = "blog/post-detail.html"
+    model = Post
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["posts_tags"] = self.object.tags.all()
+        return context
 
 
 def get_date(post):
     """Get the date of the post"""
     return post["date"]
-
-
-def index(request):
-    """Get last 3 posts"""
-    posts_list = Post.objects.all().order_by("-date")[:3]
-    return render(request, "blog/index.html", {"posts": posts_list})
-
-
-def posts(request):
-    """Get all posts"""
-    all_posts = Post.objects.all().order_by("-date")
-    return render(request, "blog/all-posts.html", {"posts": all_posts})
-
-
-def post_detail(request, slug):
-    """Get a single post"""
-    post = get_object_or_404(Post, slug=slug)
-    post_tags = post.tags.all()
-    return render(request, "blog/post-detail.html", {
-        "post": post,
-        "tags": post_tags
-        })
