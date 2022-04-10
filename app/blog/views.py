@@ -1,5 +1,5 @@
-from blog.models import Post
 from django.views.generic import ListView, DetailView
+from blog.models import Post
 
 # Create your views here.
 
@@ -11,7 +11,7 @@ class StartingPageView(ListView):
     context_object_name = "posts"
 
     def get_queryset(self):
-        queryset =  super().get_queryset()
+        queryset = super().get_queryset()
         data = queryset[:3]
         return data
 class AllPostsView(ListView):
@@ -28,7 +28,6 @@ class SinglePostView(DetailView):
         context = super().get_context_data(**kwargs)
         context["posts_tags"] = self.object.tags.all()
         return context
-
 
 def get_date(post):
     """Get the date of the post"""
