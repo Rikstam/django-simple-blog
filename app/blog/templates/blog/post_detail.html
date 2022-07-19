@@ -33,4 +33,10 @@
 <main class="bg-white rounded-xl px-12 py-12 mb-12 shadow-md">
     <p>{{ post.content|linebreaks }}</p>
 </main>
+<div>
+    <form>
+        {{ comment_form }}
+        <button>Save Comment</button>
+    </form>
+</div>
 {% endblock %}

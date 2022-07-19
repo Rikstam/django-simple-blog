@@ -1,5 +1,6 @@
 from django.views.generic import ListView, DetailView
 from blog.models import Post
+from .forms import CommentForm
 
 # Create your views here.
 
@@ -15,18 +16,19 @@ class StartingPageView(ListView):
         data = queryset[:3]
         return data
 class AllPostsView(ListView):
-    template_name = "blog/all-posts.html"
+    template_name = "blog/all_posts.html"
     model = Post
     ordering = ["-date"]
     context_object_name = "posts"
 
 class SinglePostView(DetailView):
-    template = "blog/post-detail.html"
+    template = "blog/post_detail.html"
     model = Post
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["posts_tags"] = self.object.tags.all()
+        context["comment_form"] = CommentForm()
         return context
 
 def get_date(post):
