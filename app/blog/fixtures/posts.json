@@ -1,0 +1,46 @@
+[
+    {
+        "model": "blog.post",
+        "pk": 1,
+        "fields": {
+            "title": "Testi 1",
+            "slug": "testi-1",
+            "content": "Eiusmod sint ad esse do irure eu amet. Cillum esse velit consequat qui et et reprehenderit labore velit tempor consectetur veniam eu. Est do labore eu exercitation fugiat pariatur consequat. Anim non ut sint excepteur laborum velit laborum laboris cupidatat quis enim. Non qui ut amet sint non sint veniam culpa velit. Consectetur consectetur consequat deserunt sit qui Lorem consequat Lorem. Magna mollit deserunt veniam dolor nulla laboris culpa dolor.",
+            "excerpt": "Cillum esse velit consequat qui et et reprehenderit labore velit tempor consectetur veniam eu. Est do labore eu exercitation fugiat pariatur consequat. Anim non ut sint excepteur laborum velit laborum laboris cupidatat quis enim.",
+            "date": "2022-07-19"
+        }
+    },
+    {
+        "model": "blog.post",
+        "pk": 2,
+        "fields": {
+            "title": "Testi 2",
+            "slug": "testi-2",
+            "content": "Eiusmod sint ad esse do irure eu amet. Cillum esse velit consequat qui et et reprehenderit labore velit tempor consectetur veniam eu. Est do labore eu exercitation fugiat pariatur consequat. Anim non ut sint excepteur laborum velit laborum laboris cupidatat quis enim. Non qui ut amet sint non sint veniam culpa velit. Consectetur consectetur consequat deserunt sit qui Lorem consequat Lorem. Magna mollit deserunt veniam dolor nulla laboris culpa dolor.",
+            "excerpt": "Cillum esse velit consequat qui et et reprehenderit labore velit tempor consectetur veniam eu. Est do labore eu exercitation fugiat pariatur consequat. Anim non ut sint excepteur laborum velit laborum laboris cupidatat quis enim.",
+            "date": "2022-07-19"
+        }
+    },
+    {
+        "model": "blog.post",
+        "pk": 3,
+        "fields": {
+            "title": "Testi 3",
+            "slug": "testi-3",
+            "content": "Eiusmod sint ad esse do irure eu amet. Cillum esse velit consequat qui et et reprehenderit labore velit tempor consectetur veniam eu. Est do labore eu exercitation fugiat pariatur consequat. Anim non ut sint excepteur laborum velit laborum laboris cupidatat quis enim. Non qui ut amet sint non sint veniam culpa velit. Consectetur consectetur consequat deserunt sit qui Lorem consequat Lorem. Magna mollit deserunt veniam dolor nulla laboris culpa dolor.",
+            "excerpt": "Cillum esse velit consequat qui et et reprehenderit labore velit tempor consectetur veniam eu. Est do labore eu exercitation fugiat pariatur consequat. Anim non ut sint excepteur laborum velit laborum laboris cupidatat quis enim.",
+            "date": "2022-07-19"
+        }
+    },
+    {
+        "model": "blog.post",
+        "pk": 4,
+        "fields": {
+            "title": "Testi 4",
+            "slug": "testi-4",
+            "content": "Eiusmod sint ad esse do irure eu amet. Cillum esse velit consequat qui et et reprehenderit labore velit tempor consectetur veniam eu. Est do labore eu exercitation fugiat pariatur consequat. Anim non ut sint excepteur laborum velit laborum laboris cupidatat quis enim. Non qui ut amet sint non sint veniam culpa velit. Consectetur consectetur consequat deserunt sit qui Lorem consequat Lorem. Magna mollit deserunt veniam dolor nulla laboris culpa dolor.",
+            "excerpt": "Cillum esse velit consequat qui et et reprehenderit labore velit tempor consectetur veniam eu. Est do labore eu exercitation fugiat pariatur consequat. Anim non ut sint excepteur laborum velit laborum laboris cupidatat quis enim.",
+            "date": "2022-07-19"
+        }
+    }
+]
