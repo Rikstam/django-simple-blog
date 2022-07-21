@@ -1,0 +1,11 @@
+[
+    {
+        "model": "blog.author",
+        "pk": 1,
+        "fields": {
+            "first_name": "Tim",
+            "last_name": "Testman",
+            "email": "testman@test.com"
+        }
+    }
+]
